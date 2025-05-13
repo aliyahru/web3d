@@ -1,0 +1,224 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/gif" href="./assets/images/icon.png">
+
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+    <!-- add new fonts from here only need the last line -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="prism/prism.css">
+    <script src="prism/prism.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+    <!-- add new fonts from here only need the last line -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+
+    <title>About</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="headerColor" class="navbar navbar-expand-md sticky-top nav_style">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                    <h1>AR</h1>
+                    <p>Portfolio</p>
+                    <p id="strapline">A simple portfolio</p>
+                </a>
+            </div>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-toggle="popover" data-trigger="hover"
+                            data-placement="bottom" title="About Web 3D Applications">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hobbies.html">
+                            Hobbies
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">
+                            Skills
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>About</h1>
+    <p>For my website, I created a portfolio where you can learn more about my skills and hobbies. I used Three JS to
+        display and animate the models I created.</p>
+    <h2>3D Modelling</h2>
+    <p>I used Blender to 3D model everything seen on this website.</p>
+    <p>I chose a low poly style to reduce the loading times for the models. The textures are materials created in
+        Blender. The glass on the camera is a material created through Three JS as importing it from Blender doesn't
+        work.</p>
+    <p>For the 3DS, I rigged the model using an armature which is something I've never done before. </p>
+
+
+    <div class="container-fluid image-container">
+        <div class="row">
+            <div class="col-md-8">
+                <img class="img-fluid" src="assets/images/3dsRig.PNG" alt="Armature rig for 3DS model.">
+                <figcaption>3DS with its rig.</figcaption>
+            </div>
+        </div>
+    </div>
+    <br>
+    <p>I created a camera in Three JS and used Three JS's orbit controls in order to allow the user to view the model
+        and zoom in and pan around the canvas</p>
+    <p>For the camera, I used shape keys in order to control the rotation of the shutter as well as the button seen on
+        top. If these were two separate animations, it would have been more difficult to ensure that they played at the
+        same time, but by joining the objects together they maintained their animation, but it counted as one.</p>
+
+    <h2>Design</h2>
+    <p>I created a wireframe view of the website using Figma, so I could decide how each page would be laid out.</p>
+    <p>I used Bootstrap to create most of the features on the website including the navigation bar, card view for the
+        hobbies section on the home page and a lot more. I also heavily made use of containers, rows and columns to
+        structure the components and allow the components to resize on different devices.</p>
+    <p>The website's design also has a consistent colour scheme and I have added small features such as an animation
+        when hovering over the navbar to make the website more interactive and interesting.</p>
+    <p>For the code snippet on this page, I used <code>prism.js</code> in order to style it.</p>
+
+    <h2>Integration</h2>
+    <p>The images on the hobby cards on the home page are renders of the models I created with a toon shader I created.
+        For the camera model, you can hear a shutter click when it is animated.
+        I have also used prism.js to stylise any code blocks I display on the page.</p>
+    <p>On the skills page, the model interacts with the content of the page, as clicking on certain areas toggles the
+        content of an accordion.</p>
+    <p>I have included other media content across the pages, including images like seen on this page, a slideshow on the
+        hobbies page, and a video that I created myself on the homepage.</p>
+
+    <h2>Interaction</h2>
+    <p>All of the canvases have orbit controls to move the models on the page. On the Hobbies page, you can view a
+        wireframe of the model, play an animation as well as switch the model and content of the page. On the skills
+        page, you will notice that camera movement is limited, you cannot move the camera up and down and sideways much
+        or zoom out. This is a feature and not a bug! I did this so that the desk remains the focus of the canvas when
+        interacting with it.</p>
+    <h2>Implementation</h2>
+    <p> I tested my website in week 11 by allowing other students to navigate my website and provide verbal feedback. I
+        would say this was an example of a user interview and usability testing. I found that users were able to easily
+        navigate my website using the navigation bar, but when it came to changing content on the hobbies page, they
+        would
+        often miss the button “next” that changed the page. I centered the buttons and content so they were more
+        visible, as well as adding a tip at the top of the page.</p>
+
+        <div class="container-fluid image-container ">
+        <div class="row ">
+            <div class="col-md-5 mx-auto">
+                <img class="img-fluid" src="assets/images/HobbiesBefore.PNG" alt="Hobbies page before feedback.">
+                <figcaption>Hobbies page before feedback.</figcaption>
+            </div>
+            <div class="col-md-5 mx-auto">
+                <img class="img-fluid" src="assets/images/HobbiesAfter.PNG" alt="Hobbies page after feedback.">
+                <figcaption>Hobbies page after feedback.</figcaption>
+            </div>
+        </div>
+    </div>
+
+    <h4>Regression Testing</h4>
+    <p> I also continuously tested my website when adding new features through the use of the developer tools found
+        on browsers (I predominantly used Firefox). I found the console log particularly useful. </p>
+    <h4>Cross Platform Testing</h4>
+    <p> I tested my website on different platforms (Windows and Android) to see how the UI looked and to
+        ensure features worked correctly. I was especially focused on how the Minesweeper game I implemented
+        would work. On PC, you left clicked to reveal a cell and right clicked to flag a cell. Obviously on
+        phone you can’t right click, but I found that long pressing did the same thing. </p>
+    <h4>Cross Browser Testing</h4>
+    <p> I also tested my website on different browsers such as Chrome as web design elements can act
+        differently (or not work at all) on different browsers, as well as the design varying
+        slightly</p>
+
+
+    <h2>Deeper Understanding</h2>
+    <p>JavaScript is a critical part of making this website work, and has also allowed me to introduce some more
+        advanced features. Alongside this, Three JS has a lot of advanced features that can be used in interesting ways.
+    </p>
+    <h4>Minesweeper</h4>
+    <p>On the hobbies page, you may have noticed that you can play Minesweeper! All of the logic including generating
+        where the bombs are, keeping check of how many bombs remain and the timer are all done using JavaScript. I also
+        made use of localstorage to store the player's best time. I used the tutorial seen <a href="https://www.geeksforgeeks.org/create-a-minesweeper-game-using-html-css-javascript/">here</a> as a starting point, and
+        developed the logic further as this tutorial results in a very barebones project.</p>
+    <h4>Dark Mode</h4>
+    <p>I implemented a dark mode toggle for my website. You can find the toggle for dark mode in the footer of the page,
+        and all of the elements will change to a more dark friendly version. When changing pages and leaving and
+        returning to the website (on the same device), the dark mode should still persist. Again I have used
+        localStorage in order to make this possible.</p>
+    <div class="code-container col-md-6 container-fluid">
+        <pre><code class="language-js">    let darkMode = localStorage.getItem("darkMode") == "true";
+    const checkbox = document.getElementById('darkToggle');
+    if (darkMode) {
+      var element = document.body;
+      document.body.setAttribute('data-bs-theme', 'dark');
+      checkbox.checked = true;
+    }
+        </code></pre>
+    </div>
+    <h4>Raycaster</h4>
+    <p>Three JS has a raycaster, allowing you to detect where in a canvas a user is pressing and also what objects are
+        being pressed. I have used a raycaster on the skills page to detect when certain models are pressed, which
+        triggers different content on the page to be visible.</p>
+    <br>
+    <br>
+
+    <nav class="navbar navbar-expand-md nav_style">
+        <div class="container-fluid">
+            <label class="switch">
+                <input type="checkbox" id="darkToggle">
+                <span class="slider round"></span>
+            </label>
+
+        </div>
+    </nav>
+
+    <script>
+        let darkMode = localStorage.getItem("darkMode") == "true";
+        const checkbox = document.getElementById('darkToggle');
+        if (darkMode) {
+            var element = document.body;
+            document.body.setAttribute('data-bs-theme', 'dark');
+            checkbox.checked = true;
+        }
+        checkbox.addEventListener('change', (event) => {
+            if (document.body.getAttribute('data-bs-theme') == 'dark') {
+                document.body.setAttribute('data-bs-theme', 'light')
+            }
+            else {
+                document.body.setAttribute('data-bs-theme', 'dark')
+            }
+            darkMode = !darkMode;
+            localStorage.setItem("darkMode", darkMode);
+        })</script>
+</body>

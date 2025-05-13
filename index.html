@@ -1,0 +1,185 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/gif" href="./assets/images/icon.png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+  <!-- add new fonts from here only need the last line -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+
+  <title>Homepage</title>
+</head>
+
+
+<body data-bs-theme="light">
+  <!-- NAVBAR -->
+  <nav id="headerColor" class="navbar navbar-expand-md sticky-top nav_style">
+    <div class="container-fluid">
+      <div class="logo">
+        <a class="navbar-brand" href="#">
+          <h1>AR</h1>
+          <p>Portfolio</p>
+          <p id="strapline">A simple portfolio</p>
+        </a>
+      </div>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" data-toggle="popover" data-trigger="hover" data-placement="bottom"
+              title="About Web 3D Applications">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hobbies.html">
+              Hobbies
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="skills.html">
+              Skills
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <video muted autoplay loop>
+    <source src="./assets/images/shelter from rain final.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+
+  <h2 class="heading">Home</h2>
+  <p id="homeContent">Welcome to my website for Web 3D Applications! Use the navigation bar to travel between pages.</p>
+
+
+  <h2 class="heading" id="col1">About</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Code Sample.PNG" alt="3DS Model">
+              </div>
+              <div class="col-sm-6">
+                <p>Find out more about the features of this website including how they were coded, how they work and how
+                  the 3d Models
+                  were created.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="heading" id="col2">Skills</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <p>View an interactive summary of my skills, including programming and soft skills!</p>
+
+              </div>
+              <div class="col-sm-6">
+                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Skills.PNG"
+                  alt="Snapshot of code">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="heading" id="col3">Hobbies</h2>
+  <p>Learn a bit more about me and the hobbies I enjoy!</p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Untitled.jpg" alt="3DS Model">
+          <div class="card-body">
+            <h3 class="card-title">Video Games</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Camera.jpg" alt="Camera Model">
+          <div class="card-body">
+            <h3 class="card-title">Photography</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Succulent.jpg" alt="Succulent Model">
+          <div class="card-body">
+            <h3 class="card-title">3d Modelling</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <nav class="navbar navbar-expand-md nav_style">
+    <div class="container-fluid">
+      <div class="nav-text">
+        <label class="switch">
+          <input type="checkbox" id="darkToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+
+    </div>
+  </nav>
+
+  <script>
+    let darkMode = localStorage.getItem("darkMode") == "true";
+    const checkbox = document.getElementById('darkToggle');
+    if (darkMode) {
+      var element = document.body;
+      document.body.setAttribute('data-bs-theme', 'dark');
+      checkbox.checked = true;
+    }
+    checkbox.addEventListener('change', (event) => {
+      if (document.body.getAttribute('data-bs-theme') == 'dark') {
+        document.body.setAttribute('data-bs-theme', 'light')
+      }
+      else {
+        document.body.setAttribute('data-bs-theme', 'dark')
+      }
+      darkMode = !darkMode;
+      localStorage.setItem("darkMode", darkMode);
+    })</script>
+</body>

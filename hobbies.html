@@ -1,0 +1,207 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" type="image/gif" href="./assets/images/icon.png">
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/GLTFLoader.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+
+
+  <script type="module" src="script.js" defer></script>
+  <script src="./minesweeper.js" defer></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+  <!-- add new fonts from here only need the last line -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+
+  <title>Hobbies</title>
+
+</head>
+
+<body>
+  <nav id="headerColor" class="navbar navbar-expand-md sticky-top nav_style">
+    <div class="container-fluid">
+      <div class="logo">
+        <a class="navbar-brand" href="#">
+          <h1>AR</h1>
+          <p>Portfolio</p>
+          <p id="strapline">A simple portfolio</p>
+        </a>
+      </div>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" data-toggle="popover" data-trigger="hover" data-placement="bottom"
+              title="About Web 3D Applications">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="hobbies.html">
+              Hobbies
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="skills.html">
+              Skills
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <h1>Hobbies</h1>
+    <p>Learn more about my hobbies on this page, using the "next" button to change the model and content of the page!
+    </p>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-10 mx-auto">
+        <div class="card">
+        </div>
+        <div class="card-body text-center" id="canvasContainer">
+          <canvas id="dsContainer"></canvas>
+          <button id="toggleWireFrame" class="btn action_button">Wireframe</button>
+          <button id="startAnim" class="btn action_button">Animate</button>
+          <button id="nextModel" class="btn action_button">Next</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section-info" id="model-0">
+
+    <h2>Videogames</h2>
+    <p>Videogames are a major hobby of mine, and I am the current Games Editor for The Badger, the university's student
+      newspaper!</p>
+    <p>My current favourite games include the Sims 3, Miitopia, and Minecraft </p>
+    <hr>
+    <p>Fancy a game of Minesweeper?</p>
+    <div class="minesweeper-container">
+      <h3>Minesweeper</h3>
+      <p id="flagsPlaced"></p>
+      <h3>Time</h3>
+      <div id="stopwatch">00:00</div>
+      <button id="resetSweeper" class="btn action_button">Reset</button>
+      <div id="gameBoard"></div>
+
+    </div>
+
+  </div>
+  <div class="section-info hidden" id="model-1">
+    <h2>Photography</h2>
+    <p>I enjoy photography, and despite the camera model seen here, I have only used my phone camera so far, although in
+      the future I hope to buy a proper camera.</p>
+    <div id="carouselExampleIndicators" class="carousel slide col-md-9 mx-auto">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/images/20190814_164308.jpg" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/20191029_153855.jpg" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/20200628_171634.jpg" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/20211129_164008.jpg" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/20211229_161905.jpg" class="d-block w-100 h-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+  <div class="section-info hidden" id="model-2">
+    <h2>3D Modelling</h2>
+    <p>Even before Web 3D, I enjoyed 3D modelling in Blender. I started off creating GFXs using Blender and then moved
+      onto creating my own models. My preferred style of shading models is a more cartoony style rather than realistic.
+      This style doesn't carry over well into Three js as it utilises Blender's emission shader, so the models emitting
+      light doesn't look right when imported into Three JS.
+    </p>
+
+  </div>
+
+
+  <br>
+  <br>
+  <nav class="navbar navbar-expand-md nav_style">
+    <div class="container-fluid">
+      <label class="switch">
+        <input type="checkbox" id="darkToggle">
+        <span class="slider round"></span>
+      </label>
+
+    </div>
+  </nav>
+
+  <script>
+    let darkMode = localStorage.getItem("darkMode") == "true";
+    const checkbox = document.getElementById('darkToggle');
+    if (darkMode) {
+      var element = document.body;
+      document.body.setAttribute('data-bs-theme', 'dark');
+      checkbox.checked = true;
+    }
+    checkbox.addEventListener('change', (event) => {
+      if (document.body.getAttribute('data-bs-theme') == 'dark') {
+        document.body.setAttribute('data-bs-theme', 'light')
+      }
+      else {
+        document.body.setAttribute('data-bs-theme', 'dark')
+      }
+      darkMode = !darkMode;
+      localStorage.setItem("darkMode", darkMode);
+    })</script>
+</body>
